@@ -189,6 +189,90 @@
       storyDiv.innerHTML = story;
       storyContainer.appendChild(storyDiv);
     });
+
+    // romantic place-names
+
+     map.on('load', () => {
+  const layers = ['label_city', 'label_city_capital', 'label_town'];
+
+ const textExpression = [
+  'case',
+  ['==', ['slice', ['get', 'name'], 0, 1], 'S'],
+  ['concat', 'Sleepless in ', ['get', 'name']],
+
+  ['==', ['slice', ['get', 'name'], 0, 1], 'L'],
+  ['concat', 'Love in ', ['get', 'name']],
+
+  ['==', ['slice', ['get', 'name'], 0, 1], 'R'],
+  ['concat', ['get', 'name'], ' Romance'],
+
+  ['==', ['slice', ['get', 'name'], 0, 1], 'A'],
+  ['concat', 'An Affair in ', ['get', 'name']],
+
+  ['==', ['upcase', ['slice', ['get', 'name'], 0, 1]], 'B'],
+  ['concat', 'Beloved ', ['get', 'name']],
+
+  ['==', ['slice', ['get', 'name'], 0, 1], 'C'],
+  ['concat', 'Caught in ', ['get', 'name']],
+
+  ['==', ['upcase', ['slice', ['get', 'name'], 0, 1]], 'D'],
+  ['concat', ['get', 'name'], ' Dreams'],
+
+  ['==', ['upcase', ['slice', ['get', 'name'], 0, 1]], 'E'],
+  ['concat', ['get', 'name'], ' In My Eyes'],
+
+  ['==', ['slice', ['get', 'name'], 0, 1], 'F'],
+  ['concat', 'Forever in ', ['get', 'name']],
+
+  ['==', ['slice', ['get', 'name'], 0, 1], 'G'],
+  ['concat', 'A Gentle ', ['get', 'name'], ' Embrace'],
+
+  ['==', ['upcase', ['slice', ['get', 'name'], 0, 1]], 'H'],
+  ['concat', ['get', 'name'], ' Hearts'],
+
+  ['==', ['slice', ['get', 'name'], 0, 1], 'I'],
+  ['concat', 'Idolized in ', ['get', 'name']],
+
+  ['==', ['upcase', ['slice', ['get', 'name'], 0, 1]], 'J'],
+  ['concat', ['get', 'name'], ' Journey'],
+
+  ['==', ['slice', ['get', 'name'], 0, 1], 'K'],
+  ['concat', 'Kissing in ', ['get', 'name']],
+
+  ['==', ['upcase', ['slice', ['get', 'name'], 0, 1]], 'M'],
+  ['concat', ['get', 'name'], ' Memories'],
+
+  ['==', ['slice', ['get', 'name'], 0, 1], 'N'],
+  ['concat', 'A Night in ', ['get', 'name']],
+
+  ['==', ['upcase', ['slice', ['get', 'name'], 0, 1]], 'O'],
+  ['concat', ['get', 'name'], ' Oasis'],
+            
+  ['==', ['slice', ['get', 'name'], 0, 1], 'P'],
+  ['concat', 'Passion in ', ['get', 'name']],
+
+  ['==', ['slice', ['get', 'name'], 0, 1], 'T'],
+  ['concat', 'Together in ', ['get', 'name']],
+     
+  ['==', ['slice', ['get', 'name'], 0, 1], 'V'],
+  ['concat', 'Valentines in ', ['get', 'name']],
+
+  ['==', ['upcase', ['slice', ['get', 'name'], 0, 1]], 'W'],
+  ['concat', ['get', 'name'], ' Waltz'],
+
+  ['==', ['slice', ['get', 'name'], 0, 1], 'Y'],
+  ['concat', 'Yours in ', ['get', 'name']],
+   
+
+    // Otherwise, keep the original name
+    ['get', 'name']
+  ];
+
+  layers.forEach(id => {
+    map.setLayoutProperty(id, 'text-field', textExpression);
+    map.setLayoutProperty(id, 'text-font', ['Noto Sans Regular']);
+  });
+});
   </script>
 </body>
 </html>
