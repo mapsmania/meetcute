@@ -83,6 +83,15 @@
   font-size: 1.5em;
   color: #111;
 }
+#map-attribution {
+  position: fixed;
+  bottom: 5px;
+  right: 10px;
+  font-size: 11px;
+  background: rgba(255,255,255,0.7);
+  padding: 2px 2px;
+  border-radius: 3px;
+}    
   </style>
 </head>
 <body>
@@ -96,8 +105,16 @@
       container: 'map',
       style: 'romance.json',
       center: [2.3522, 48.8566],
-      zoom: 2
-    });
+      zoom: 2,
+      attributionControl: true // turn off default placement
+});
+
+// Add attribution control to a separate container
+const attributionControl = new maplibregl.AttributionControl({
+  compact: false
+});
+map.addControl(attributionControl);
+
 
     const storyContainer = document.getElementById('story-container');
     const storyPlaceholder = document.getElementById('story-placeholder');
