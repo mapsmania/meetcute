@@ -110,7 +110,7 @@
       attributionControl: false // turn off default placement
 });
 
-// Add attribution control to a separate container
+// Create control with custom attribution
 const attributionControl = new maplibregl.AttributionControl({
   compact: false,
   customAttribution: [
@@ -118,7 +118,8 @@ const attributionControl = new maplibregl.AttributionControl({
   ]
 });
 
-map.addControl(attributionControl, 'bottom-right');
+// Add to your custom container
+document.getElementById('map-attribution').appendChild(attributionControl.onAdd(map));
 
     const storyContainer = document.getElementById('story-container');
     const storyPlaceholder = document.getElementById('story-placeholder');
