@@ -112,10 +112,13 @@
 
 // Add attribution control to a separate container
 const attributionControl = new maplibregl.AttributionControl({
-  compact: false
+  compact: false,
+  customAttribution: [
+    '<a href="https://googlemapsmania.blogspot.com/2025/08/the-map-to-your-heart.html" target="_blank">About</a>'
+  ]
 });
-map.addControl(attributionControl);
 
+map.addControl(attributionControl, 'bottom-right');
 
     const storyContainer = document.getElementById('story-container');
     const storyPlaceholder = document.getElementById('story-placeholder');
