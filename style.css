@@ -1,0 +1,84 @@
+  body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: radial-gradient(circle, #fffde0 0%, #f0f0aa 100%);
+      font-family: 'Luckiest Guy', cursive;
+      display: flex;
+      flex-direction: column;
+    }
+  #map {
+  width: 100%;
+  height: 70vh;
+  
+-webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 100"><path fill="black" d="M75,20 C95,0 125,0 140,20 C155,50 125,85 75,100 C25,85 -5,50 10,20 C25,0 55,0 75,20 Z"/></svg>');
+  mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 100"><path fill="black" d="M75,20 C95,0 125,0 140,20 C155,50 125,85 75,100 C25,85 -5,50 10,20 C25,0 55,0 75,20 Z"/></svg>');
+      
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}  
+  overflow: hidden;
+}
+
+
+ /* FIXED STORY CONTAINER */
+ #story-container {
+  height: 60vh;
+  overflow-y: auto;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column; /* Changed to column layout */
+  align-items: center;    /* Center horizontally */
+  justify-content: flex-start; /* Align to top */
+  box-sizing: border-box;
+}
+
+/* FIXED ROMANCE STORY */
+.romance-story {
+  font-family: 'EB Garamond', serif;
+  font-size: 1.5em;
+  max-width: 90%;        /* More responsive width */
+  width: 100%;
+  color: #111;
+  line-height: 1.6;
+  text-align: center;    /* Center text alignment */
+  white-space: pre-wrap;
+  text-shadow: none;
+  margin: 0 auto;        /* Center horizontally */
+  display: flex;         /* Add flex */
+  flex-direction: column; /* Column layout */
+  align-items: center;   /* Center children */
+}
+
+/* FIXED STORY CONTENT */
+.story-content {
+  text-align: left;      /* Left-align the actual story text */
+  max-width: 800px;      /* Optimal reading width */
+  width: 100%;
+  margin-top: 1em;       /* Space after title */
+}
+
+.story-title {
+  text-align: center;
+  margin-bottom: 0.5em;
+  width: 100%;           /* Full width for proper centering */
+}
+
+/* ADD THIS FOR STORY PLACEHOLDER */
+#story-placeholder {
+  text-align: center;
+  width: 100%;
+  font-family: 'EB Garamond', serif;
+  font-size: 1.5em;
+  color: #111;
+}
+#map-attribution {
+  position: fixed;
+  bottom: 5px;
+  right: 10px;
+  font-size: 11px;
+  background: rgba(255,255,255,0.7);
+  padding: 2px 2px;
+  border-radius: 3px;
+}  
