@@ -32,14 +32,14 @@ document.getElementById('map-attribution').appendChild(attributionControl.onAdd(
 
 
   // Beat 1: Boy meets girl
-  "meet": "In the heart of $town, $boy saw $girl at the $place. | $boy was lost in $town when $girl, offered directions — and maybe more. | $boy first saw $girl beneath the $season sky in $town. | At the $place in $town, their eyes met and the world shifted. | $boy and $girl kept running into each other at the $place in $town — was it fate or just coincidence? | $boy first saw $girl standing in the rain outside the $place in $town. He offered to share his umbrella. | $boy was wandering around $town when he stumbled upon $girl in the $place. | $boy and %girl first crossed paths beneath the $season sky in $town.",
+  "meet": "$boy and $girl had been chatting online for months. They decided to meet IRL at a bar in $town. | In the heart of $town, $boy saw $girl at the $place. | $boy was lost in $town when $girl, offered directions — and maybe more. | $boy first saw $girl beneath the $season sky in $town. | At the $place in $town, their eyes met and the world shifted. | $boy and $girl kept running into each other at the $place in $town — was it fate or just coincidence? | $boy first saw $girl standing in the rain outside the $place in $town. He offered to share his umbrella. | $boy was wandering around $town when he stumbled upon $girl in the $place. | $boy and %girl first crossed paths beneath the $season sky in $town.",
 
   // Atmospheric beat after the meeting
   "moment": "He smiled as if nothing had changed, though everything had. | She looked away pretending not to care , but her hands trembled. | The scent of coffee and rain made time collapse into a single heartbeat. | He said her name soft as fog. | All sound in the $place faded away until only her laugh remained. | A thousand words passed in the looks between them.",
 
 
   // Beat 2: Obstacle separates them
-  "obstacle": "But $obstacleType stood in their way. | Yet there was $obstacleType, keeping them apart. | Their hearts were tangled, but $obstacleType loomed between them. | Some loves start with passion; but theirs cooled under $obstacleType | Before their love story even began $obstacleType threatened to end it.",
+  "obstacle": "Unfortunately he was a Montague and she was a Capulet. | But $obstacleType stood in their way. | Yet there was $obstacleType, keeping them apart. | Their hearts were tangled, but $obstacleType loomed between them. | Some loves start with passion; but theirs cooled under $obstacleType | Before their love story even began $obstacleType threatened to end it.",
 
       "obstacleType": "distance | an old promise | her departure date | his silence | a misunderstanding | her family’s disapproval | his fear of commitment | her lack of trust | past betrayals | their different backgrounds | her burning ambition | a rival for her affection | his job offer in a new city | their pasts returning to haunt them",
 
